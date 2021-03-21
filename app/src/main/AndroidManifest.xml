@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.applicationpetrol">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature android:name="android.hardware.Location.network"/>
+
+    <uses-feature android:name="android.hardware.Location.gps"/>
+
+
+    <application android:theme="@style/Theme.ApplicationPetrol"
+        android:label="@string/app_name" android:icon="@mipmap/appicon" android:allowBackup="true">
+
+    <receiver android:name=".MyReceiver" android:exported="true" android:enabled="true"/>
+
+    <activity android:name=".rideActivity"
+        android:screenOrientation="portrait"/>
+
+
+    <activity android:name=".MainActivity2"
+        android:screenOrientation="portrait"/>
+
+
+    <activity android:name=".firstActivity" android:screenOrientation="portrait">
+
+
+    <intent-filter>
+
+    <action android:name="android.intent.action.MAIN"/>
+
+    <category android:name="android.intent.category.LAUNCHER"/>
+
+</intent-filter>
+
+</activity>
+
+    <activity android:name=".MainActivity"
+        android:screenOrientation="portrait"/>
+
+</application>
+
+</manifest>
